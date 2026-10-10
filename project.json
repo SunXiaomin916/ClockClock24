@@ -1,0 +1,237 @@
+{
+  "file": "index.html",
+  "type": "web",
+  "version": 1,
+  "title": "ClockClock 24 — Kinetic Desktop",
+  "description": "ClockClock 24 风格离线动态壁纸。24 钟面、48 根独立指针；14 种配色与材质、12 组多阶段编舞、30–360 FPS 六档上限、12/24 小时、暂停恢复与 4K 优化。独立实现，非官方固件。",
+  "preview": "preview.jpg",
+  "general": {
+    "properties": {
+      "theme": {
+        "order": 0,
+        "text": "外观材质 / Theme",
+        "type": "combo",
+        "value": "noir",
+        "options": [
+          {
+            "value": "noir",
+            "label": "曜石黑 · Noir"
+          },
+          {
+            "value": "porcelain",
+            "label": "瓷白 · Porcelain"
+          },
+          {
+            "value": "gold",
+            "label": "黑金 · Black Gold"
+          },
+          {
+            "value": "stone",
+            "label": "岩灰 · Stone"
+          },
+          {
+            "value": "oled",
+            "label": "OLED 纯黑"
+          },
+          {
+            "value": "white_gold",
+            "label": "白金 · White Gold"
+          },
+          {
+            "value": "white_sterling",
+            "label": "白银 · White Sterling"
+          },
+          {
+            "value": "black_sterling",
+            "label": "黑银 · Black Sterling"
+          },
+          {
+            "value": "dada_blue",
+            "label": "达达蓝 · Dada Blue"
+          },
+          {
+            "value": "pinakin_neela",
+            "label": "蓝银 · Pinakin Neela"
+          },
+          {
+            "value": "pinakin_hara",
+            "label": "绿金 · Pinakin Hara"
+          },
+          {
+            "value": "decade",
+            "label": "黑金双针 · Decade"
+          },
+          {
+            "value": "sunset_dune",
+            "label": "落日洞石 · Sunset Dune"
+          },
+          {
+            "value": "pari_dust",
+            "label": "暖白石纹 · Pari Dust"
+          }
+        ]
+      },
+      "mode": {
+        "order": 1,
+        "text": "指针编舞 / Choreography",
+        "type": "combo",
+        "value": "active",
+        "options": [
+          {
+            "label": "Quiet 最小运动",
+            "value": "quiet"
+          },
+          {
+            "label": "Medium 柔和流动",
+            "value": "medium"
+          },
+          {
+            "label": "Active 复杂编舞",
+            "value": "active"
+          }
+        ]
+      },
+      "format": {
+        "order": 3,
+        "text": "时间格式 / Time format",
+        "type": "combo",
+        "value": "24",
+        "options": [
+          {
+            "label": "24 小时",
+            "value": "24"
+          },
+          {
+            "label": "12 小时",
+            "value": "12"
+          }
+        ]
+      },
+      "fps": {
+        "order": 4,
+        "text": "动画帧率 / FPS（同时遵循全局上限）",
+        "type": "combo",
+        "value": "60",
+        "options": [
+          {
+            "label": "30 FPS 省资源",
+            "value": "30"
+          },
+          {
+            "label": "60 FPS 更流畅",
+            "value": "60"
+          },
+          {
+            "label": "120 FPS",
+            "value": "120"
+          },
+          {
+            "label": "180 FPS",
+            "value": "180"
+          },
+          {
+            "label": "240 FPS",
+            "value": "240"
+          },
+          {
+            "label": "360 FPS",
+            "value": "360"
+          }
+        ]
+      },
+      "size": {
+        "order": 5,
+        "text": "装置尺寸 / Size",
+        "type": "combo",
+        "value": "86",
+        "options": [
+          {
+            "label": "72% 小",
+            "value": "72"
+          },
+          {
+            "label": "86% 标准",
+            "value": "86"
+          },
+          {
+            "label": "96% 大",
+            "value": "96"
+          }
+        ]
+      },
+      "drift": {
+        "order": 6,
+        "text": "屏幕缓慢漂移 / Slow drift",
+        "type": "bool",
+        "value": false
+      },
+      "choreography": {
+        "order": 2,
+        "text": "编舞曲目 / Choreography",
+        "type": "combo",
+        "value": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "label": "自动轮播（12 / 5 组）"
+          },
+          {
+            "value": "wave",
+            "label": "行进波浪"
+          },
+          {
+            "value": "pendulum",
+            "label": "同步钟摆"
+          },
+          {
+            "value": "spiral",
+            "label": "同心螺旋"
+          },
+          {
+            "value": "iris",
+            "label": "花瓣开合"
+          },
+          {
+            "value": "cascade",
+            "label": "逐行瀑布"
+          },
+          {
+            "value": "checker",
+            "label": "棋盘翻转"
+          },
+          {
+            "value": "symmetry",
+            "label": "镜像对开"
+          },
+          {
+            "value": "orbit",
+            "label": "四组风车"
+          },
+          {
+            "value": "counterflow",
+            "label": "双针逆流"
+          },
+          {
+            "value": "weave",
+            "label": "交织流线"
+          },
+          {
+            "value": "stagger",
+            "label": "交错剪刀"
+          },
+          {
+            "value": "scatter",
+            "label": "散开重聚"
+          }
+        ]
+      }
+    },
+    "supportsaudioprocessing": false
+  },
+  "tags": [
+    "Clock",
+    "Minimal",
+    "Abstract",
+    "Relaxing"
+  ]
+}

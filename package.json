@@ -1,0 +1,30 @@
+{
+  "name": "clockclock24-wallpaper",
+  "version": "3.0.0",
+  "productName": "ClockClock 24",
+  "main": "desktop/main.cjs",
+  "private": true,
+  "description": "Offline Wallpaper Engine web wallpaper; no runtime dependencies",
+  "scripts": {
+    "start": "node tools/serve.cjs",
+    "desktop": "electron .",
+    "build": "node tools/package.mjs",
+    "build:windows": "node tools/package.mjs windows",
+    "build:macos": "node tools/package.mjs macos",
+    "build:wallpaper": "node tools/package.mjs wallpaper",
+    "build:source": "node tools/package.mjs source",
+    "verify:release": "node tools/verify-release.mjs",
+    "test:desktop": "node tests/desktop.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "test:browser": "node tests/browser.cjs",
+    "test:metal": "node tests/metal-browser.cjs",
+    "test:choreography": "node tests/choreography-browser.cjs",
+    "test:fps": "node tests/fps-browser.cjs"
+  },
+  "devDependencies": {
+    "@electron/asar": "4.3.1",
+    "@electron/packager": "20.3.0",
+    "electron": "44.7.0",
+    "plist": "3.1.0"
+  }
+}

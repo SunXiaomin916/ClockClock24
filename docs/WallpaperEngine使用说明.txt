@@ -1,0 +1,31 @@
+ClockClock 24 3.0.0 — Wallpaper Engine 正式内容包
+================================================
+适用：Windows 上已安装的 Wallpaper Engine。完全离线，无额外运行依赖。
+此包只包含 Web 壁纸运行文件和说明，不包含 Electron、源码测试或开发依赖。
+
+直接导入
+完整解压压缩包。
+Steam → Wallpaper Engine → 管理 → 浏览本地文件。
+将解压后的 ClockClock24 文件夹复制到 projects\myprojects\。
+确认结构为 projects\myprojects\ClockClock24\project.json，旁边有 index.html、js、css、preview.jpg。
+保持文件完整；不必用编辑器重新创建 Web 项目，以免丢失自定义属性。
+打开或重新启动 Wallpaper Engine，选择本地的“ClockClock 24 — Kinetic Desktop”并应用。
+ZIP 是运输压缩包，需要先解压，不能把 ZIP 本身当作 Web 壁纸文件选择。
+
+使用
+在 Wallpaper Engine 原生属性面板中选择 14 款材质、三档模式、12 组编舞、
+12/24 小时、尺寸、漂移和 30/60/120/180/240/360 FPS（默认 60）。
+实际帧率也受 Wallpaper Engine 全局 FPS、显示器刷新率和性能限制。
+正常壁纸模式隐藏网页设置按钮；调试时可用浏览器打开 index.html?dev=1。
+
+开机启动和屏保
+本内容包的开机启动由 Wallpaper Engine 自己管理：在 Wallpaper Engine 设置中开启随 Windows 启动。
+屏保：在 Wallpaper Engine 安装/配置屏保组件，再在 Windows 屏幕保护程序中选择 Wallpaper Engine。
+本项目没有独立 .scr；无需运行本项目的 Windows 桌面版。
+
+更新
+退出旧壁纸后，用新 ClockClock24 文件夹替换旧项目或作为新项目导入，再重新应用。
+不要把 Windows/macOS 桌面版的 .exe/.app 导入 Wallpaper Engine。
+
+工程为参考 Humans since 1982 ClockClock 24 的独立实现，非官方固件或产品。
+材质与运动为离线算法，OLED 漂移不能保证防烧屏。

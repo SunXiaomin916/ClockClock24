@@ -1,0 +1,47 @@
+ClockClock 24 3.0.0 — macOS 离线桌面包
+======================================
+适用：macOS 13 Ventura 或更新版本。
+arm64 包用于 Apple Silicon（M1 / M2 / M3 / M4 等）；x64 包用于 Intel Mac。
+包内含完整应用和运行时，不需要 Node.js、Homebrew 或 Xcode。
+
+重要交付状态
+此包在 Windows 上交叉打包，尚未在 Mac 真机运行；未做 Apple Developer ID 签名/公证。
+请使用下方安装脚本在你的 Mac 上生成本地签名。它不是 Apple 公证，也不能消除所有系统确认。
+不应将此包描述为已通过 Mac 实机验收或免安全提示的公开发行版。
+
+首次使用
+1. 在 Finder 中完整解压，保留 ClockClock 24.app、安装到应用程序.command、entitlements.plist。
+2. 双击“安装到应用程序.command”，应用会复制到 ~/Applications 并执行系统自带 codesign。
+   无需管理员密码；不改系统安全设置。安装完成后自动打开应用。
+3. 如果 Gatekeeper 阻止脚本或应用，请核实来源，再在“系统设置 → 隐私与安全性”中选择允许打开。
+   如 Finder 未能执行脚本，可打开终端输入 /bin/zsh 加一个空格，拖入该 .command 文件后回车。
+4. 之后直接从 ~/Applications/ClockClock 24.app 打开；控制入口是顶部菜单栏的时钟图标。
+5. 关闭设置窗口后，壁纸继续运行；菜单栏 → 退出 ClockClock 24 完全退出。
+
+开机启动（默认关闭）
+设置 → 桌面应用 → 开机启动；菜单栏图标的菜单也提供相同开关。
+在当前用户下次登录时启动到菜单栏，不弹设置窗口。
+通过当前用户的 LaunchAgent 实现，无管理员权限：
+~/Library/LaunchAgents/local.clockclock24.desktop.plist
+关闭开关会删除这一文件，不影响其他应用。当前进程继续运行，直到选择退出。
+系统如禁用了后台项目，应到“通用 → 登录项与扩展”检查；界面只能核对本应用登记文件。
+安装位置变化后，请在新位置重新关闭/开启开关。
+
+日常使用
+桌面显示在主显示器，鼠标操作穿透到桌面图标；设置由菜单栏打开。
+14 种材质、三种模式、12 组编舞、12/24 小时、六档帧率（默认 60）、漂移均可用。
+关闭“桌面壁纸”只保留时钟窗口，可按 F 全屏展示。
+应用不出现在 Dock，设置窗口关闭后请到菜单栏找入口。
+本应用不是 macOS .saver 屏保；Wallpaper Engine 本身也不在 macOS 上运行。
+
+升级与卸载
+先关闭旧版开机启动并退出，再移走 ~/Applications 中的旧应用，运行新版安装脚本。
+用户设置保存在 ~/Library/Application Support/ClockClock 24/，升级通常会保留。
+卸载：关闭开机启动 → 退出 → 删除 .app；可按需保留或删除上述用户设置目录。
+如果应用无法启动，可在 Finder 的“前往文件夹”中打开 ~/Library/LaunchAgents，
+只删除 local.clockclock24.desktop.plist，停止以后登录时启动该应用。
+
+限制
+本版的桌面层、Spaces、休眠恢复、菜单栏和登录启动仍需 Mac 真机核验。
+如需对外提供免额外确认的正式安装包，需要在 Mac 上签名、公证并完成验收。
+独立实现，非 Humans since 1982 官方产品。

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'">
+<title>ClockClock 24 · Kinetic Desktop</title>
+<script src="js/bridge.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+<main id="installation" role="img" aria-label="由24个模拟钟面与48根独立指针组成的数字时钟"><canvas id="faces" aria-hidden="true"></canvas><canvas id="stage" aria-hidden="true"></canvas></main>
+<button id="gear" type="button" aria-label="设置" title="打开设置 (C)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 6v6l5 3"/></svg></button>
+<section id="sheet" hidden aria-label="ClockClock 设置">
+  <header class="settings-header">
+    <div class="clock-mark" aria-hidden="true"><i class="mini-clock"><b></b></i><i class="mini-clock"><b></b></i></div>
+    <div class="settings-title"><h1>ClockClock 24</h1><p>24 个钟面 · 48 根指针</p></div>
+    <button id="close" type="button" aria-label="关闭"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg></button>
+  </header>
+  <section class="settings-group" aria-labelledby="appearance-heading">
+    <h2 id="appearance-heading">外观</h2>
+    <div class="control"><label for="theme">外观材质</label><select id="theme"></select></div>
+  </section>
+  <section class="settings-group" aria-labelledby="motion-heading">
+    <h2 id="motion-heading">运动</h2>
+    <div class="control"><label for="mode">指针编舞</label><select id="mode"><option value="quiet">Quiet · 最小运动</option><option value="medium">Medium · 柔和流动</option><option value="active">Active · 复杂编舞</option></select></div>
+    <div class="control"><label for="choreography">编舞曲目</label><select id="choreography"></select></div>
+  </section>
+  <section class="settings-group display-group" aria-labelledby="display-heading">
+    <h2 id="display-heading">显示</h2>
+    <div class="display-grid">
+      <div class="control"><label for="format">时间格式</label><select id="format"><option value="24">24 小时制</option><option value="12">12 小时制</option></select></div>
+      <div class="control"><label for="fps">动画帧率</label><select id="fps">
+        <option value="30">30 FPS</option><option value="60">60 FPS</option>
+        <option value="120">120 FPS</option><option value="180">180 FPS</option>
+        <option value="240">240 FPS</option><option value="360">360 FPS</option>
+      </select></div>
+      <div class="control"><label for="size">装置尺寸</label><select id="size"><option value="72">小 · 72%</option><option value="86">标准 · 86%</option><option value="96">大 · 96%</option></select></div>
+      <div class="control drift-control"><label for="drift">屏幕缓慢漂移</label><input id="drift" type="checkbox"></div>
+    </div>
+  </section>
+  <section id="desktop-controls" class="settings-group" hidden aria-labelledby="desktop-heading">
+    <h2 id="desktop-heading">桌面应用</h2>
+    <div class="control desktop-toggle"><label for="desktop-wallpaper">桌面壁纸</label><input id="desktop-wallpaper" class="toggle" type="checkbox"></div>
+    <div class="control desktop-toggle"><label for="desktop-startup">开机启动</label><input id="desktop-startup" class="toggle" type="checkbox"></div>
+    <div class="control desktop-toggle"><label for="desktop-paused">暂停动画</label><input id="desktop-paused" class="toggle" type="checkbox"></div>
+    <p id="desktop-message" role="status"></p>
+    <button id="desktop-quit" type="button">退出应用</button>
+  </section>
+  <div class="main-actions">
+    <button id="demo" type="button"><span class="play-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 6 9 6-9 6Z"/></svg></span><span>播放一次编舞</span></button>
+    <button id="fullscreen" type="button">浏览器全屏</button>
+  </div>
+  <details id="dev-controls" hidden>
+    <summary>开发预览<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 9 5 5 5-5"/></svg></summary>
+    <div class="dev-content">
+      <p>模拟时间只在本次预览有效</p>
+      <div class="control"><label for="preview-time">模拟时间</label><input id="preview-time" type="time" step="1" value="09:35:00"></div>
+      <div class="actions"><button id="apply-time" type="button">过渡到此时间</button><button id="live-time" type="button">恢复系统时间</button></div>
+      <div class="control"><label for="preview-digits">检查数字</label><select id="preview-digits"><option value="">选择 0–9</option></select></div>
+    </div>
+  </details>
+  <footer class="settings-footer"><div class="shortcuts"><span><kbd>C</kbd> 设置</span><span><kbd>D</kbd> 编舞</span><span><kbd>F</kbd> 全屏</span></div><p>点击面板外即可关闭</p></footer>
+</section>
+<div id="status" role="status"></div>
+<noscript>请启用 JavaScript 以显示时钟。</noscript>
+<script src="js/glyphs.js"></script>
+<script src="js/choreography.js"></script>
+<script src="js/config.js"></script>
+<script src="js/time.js"></script>
+<script src="js/motion.js"></script>
+<script src="js/metal.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/app.js"></script>
+<script src="js/desktop.js"></script>
+</body>
+</html>

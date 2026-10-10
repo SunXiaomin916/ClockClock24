@@ -1,0 +1,26 @@
+ClockClock 24 3.0.0
+===================
+
+成品都在 release 文件夹：
+Windows-x64.zip：完整解压，双击 ClockClock24.exe。
+macOS-arm64.zip：Apple Silicon Mac，macOS 13+。
+macOS-x64.zip：Intel Mac，macOS 13+。
+  Mac 包完整解压后运行“安装到应用程序.command”，以后从个人 Applications 打开。
+  Mac 包未经真机验证和 Apple 公证，安装时在本机生成临时签名。
+WallpaperEngine.zip：把包内 ClockClock24 复制到 Wallpaper Engine 的 projects\myprojects。
+Source.zip：源码存档，不包含桌面运行时和开发依赖。
+
+桌面版的开机启动默认关闭。
+托盘／菜单栏 → 设置 → 桌面应用 → 开机启动，可开启或关闭。
+关闭设置窗口后程序仍运行；要结束请选择“退出 ClockClock 24”。
+仅在主显示器显示壁纸。桌面鼠标操作穿透，请从托盘／菜单栏控制。
+Wallpaper Engine 版的开机启动和系统屏保由 Wallpaper Engine 自己管理。
+
+网页预览仍可双击根目录 index.html，保持 js、css 完整。
+C 设置，D 编舞，F 全屏；鼠标静止 10 秒隐藏设置图标。
+
+各包附平台使用说明；ZIP 旁有 SHA-256 校验和及逐文件清单。
+完整中文指南：README.zh-CN.md；平台、构建和验证说明在 docs。
+原 2.3.1 备份保留在项目旁 ClockClock24_Backups 文件夹。
+
+这是参考 Humans since 1982 的独立实现，非官方产品或固件。

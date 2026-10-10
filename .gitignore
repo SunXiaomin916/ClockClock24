@@ -1,0 +1,12 @@
+node_modules/
+test-results/
+playwright-report/
+*.log
+build/
+release/
+.cache/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
